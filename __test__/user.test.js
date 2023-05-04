@@ -1,6 +1,5 @@
 const request = require("supertest");
 const app = require("../app");
-const jwt = require("jsonwebtoken");
 const { User } = require("../models");
 
 // test api register
@@ -44,12 +43,14 @@ describe("POST /users/register", () => {
         password: "123456",
       })
       .expect(500)
+      
       .end((err, res) => {
         if (err){
           console.log(err);
         }
         done();
       });
+
   });
 
 });

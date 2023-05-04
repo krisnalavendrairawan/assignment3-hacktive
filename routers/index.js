@@ -9,12 +9,12 @@ router.post('/users/login', UserController.login);
 
 router.use(authentication)
 
-router.get('/photos', PhotoController.GetAllPhotos);
 router.get('/photos/:id', PhotoController.getOnePhotoByID);
 router.post('/photos', PhotoController.createPhoto)
 
 router.use('/photos/:id', authorization)
 
+router.get('/photos', PhotoController.GetAllPhotos);
 router.put('/photos/:id', PhotoController.updateOnePhotoByID)
 router.delete('/photos/:id', PhotoController.deleteOnePhotoByID)
 
