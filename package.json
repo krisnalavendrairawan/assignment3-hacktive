@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test npx jest --detectOpenHandles --forceExit",
+    "main" : "app.js",
     "db:create:test": "NODE_ENV=test npx sequelize db:create",
     "db:migrate:test": "NODE_ENV=test npx sequelize db:migrate"
   },
